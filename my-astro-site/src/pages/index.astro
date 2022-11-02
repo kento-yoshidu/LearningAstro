@@ -1,4 +1,6 @@
 ---
+import Header from "../components/header.astro"
+const title = "Hello Astro"
 ---
 
 <html lang="en">
@@ -6,9 +8,16 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{title}</title>
 	</head>
 	<body>
-		<h1>Hello World</h1>
+    <Header
+      title={title}
+    />
 	</body>
 </html>
+<style>
+  body{
+    margin: 0
+  }
+</style>
